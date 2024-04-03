@@ -4,3 +4,6 @@ $ npm install -D prisma
 $ npx prisma init
 $ npx install @prisma/client
 $ npx prisma db push
+
+Authorize redirect URls on google
+http://localhost:3000/api/auth/callback/google
