@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import jsonData from "../movies.json";
 
 const Auth = () => {
 
@@ -19,6 +20,10 @@ const Auth = () => {
       currentVariant === "login" ? "register" : "login"
     );
   }, []);
+
+  console.log("hello world");
+  // console.log(typeof JSON.stringify(jsonData))
+   
 
   const login = useCallback(async () => {
     try {
