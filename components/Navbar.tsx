@@ -11,6 +11,7 @@ const Navbar = () => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > TOP_OFFSET) {
