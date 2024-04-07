@@ -37,7 +37,8 @@ const Home = () => {
       <Navbar />
       <Billboard />
       <div className="pb-40">
-        <MovieList title="Trending Now" data={moviees}/>
+        <MovieList title="Trending Now" data={moviees} />
+        <MovieList title="My List" data={favorites} />
       </div>
     </>
   );

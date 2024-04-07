@@ -1,17 +1,16 @@
-import PlayButton from "./PlayButton";
-import FavoriteButton from "./FavoriteButton";
-import useInfoModalStore from "@/hooks/useInfoModalStore";
-import useMovie from "@/hooks/useMovie";
-import { useState , useEffect , useCallback } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import React, { useCallback, useEffect, useState } from 'react';
 
 
+import PlayButton from '@/components/PlayButton';
+import FavoriteButton from '@/components/FavoriteButton';
+import useInfoModalStore from '@/hooks/useInfoModalStore';
+import useMovie from '@/hooks/useMovie';
 
 interface InfoModalProps {
   visible?: boolean;
   onClose: any;
 }
-
 
 const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   const [isVisible, setIsVisible] = useState<boolean>(!!visible);
@@ -77,4 +76,5 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     </div>
   );
 }
-export default InfoModal
+
+export default InfoModal;
