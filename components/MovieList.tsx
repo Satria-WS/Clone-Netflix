@@ -3,8 +3,19 @@ import React from "react";
 import MovieCard from "@/components/MovieCard";
 import { isEmpty } from "lodash";
 
+
+export interface MovieInterface {
+  id: string;
+  title: string;
+  description: string;
+  thumbnailUrl: string;
+  videoUrl: string;
+  duration: string;
+  genre: string;
+}
+
 interface MovieListProps {
-  data: Record<string, any>[];
+  data: MovieInterface[];
   title: string;
 }
 
