@@ -10,17 +10,17 @@ export default async function handler(
 ) {
   if (req.method === "POST" || req.method === "GET") {
     try {
-      for (const movie of jsonData) {
-        const exist = await prisma.movie.findMany({
-          where: {
-            title: movie.title,
-          },
-        });
+      // for (const movie of jsonData) {
+      //   const exist = await prisma.movie.findMany({
+      //     where: {
+      //       title: movie.title,
+      //     },
+      //   });
 
-        await prisma.movie.create({
-          data: movie,
-        });
-      }
+      //   await prisma.movie.create({
+      //     data: movie,
+      //   });
+      // }
       res.status(200).json({ message: "Data seeded successfully" });
     } catch (error) {
       console.error(error);
