@@ -17,9 +17,13 @@ export default async function handler(
           },
         });
 
-        await prisma.movie.create({
-          data: movie,
-        });
+        if (!exist) {
+          return res.status(400).json({ message: "Movie already exist" });
+        } else {
+          await prisma.movie.create({
+            data: movie,
+          });
+        }
       }
       res.status(200).json({ message: "Data seeded successfully" });
     } catch (error) {
